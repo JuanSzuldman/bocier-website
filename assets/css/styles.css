@@ -33,3 +33,49 @@ body {
 }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; }
+
+/* ═══════════════════════════════════════
+   NAVBAR
+   ═══════════════════════════════════════ */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 48px;
+  background: var(--c-cream);
+  border-bottom: 1px solid var(--c-border);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+.navbar__logo {
+  height: 42px;
+  width: auto;
+  mix-blend-mode: multiply;
+}
+
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+.navbar__links a {
+  font-family: var(--font-ui);
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  color: var(--c-taupe);
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar__links a:hover { color: var(--c-ink); }
+
+.navbar__cta {
+  color: var(--c-ink) !important;
+  border-bottom: 1px solid var(--c-ink);
+  padding-bottom: 1px;
+}
