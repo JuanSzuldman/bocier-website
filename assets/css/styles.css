@@ -1,0 +1,35 @@
+/* ═══════════════════════════════════════
+   DESIGN TOKENS
+   ═══════════════════════════════════════ */
+:root {
+  --c-white:  #FFFFFF;
+  --c-cream:  #F8F4EF;
+  --c-stone:  #EDE8E0;
+  --c-camel:  #D4B896;
+  --c-taupe:  #8C7B6B;
+  --c-ink:    #1C1C1C;
+  --c-border: #E2DBD0;
+
+  --font-ui:   'Montserrat', sans-serif;
+  --font-text: 'Calibri', 'Carlito', Arial, sans-serif;
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 96px;
+}
+
+/* ═══════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-ui);
+  color: var(--c-ink);
+  background: var(--c-cream);
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
