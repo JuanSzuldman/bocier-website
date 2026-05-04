@@ -91,7 +91,7 @@ a { text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('../images/C-V-2-bocier.png') center / cover no-repeat;
+  background: url('../images/C-V-2-bocier.jpg') center / cover no-repeat;
   background-position: 28% top;
 }
 
