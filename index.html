@@ -257,7 +257,18 @@
     const btn   = document.getElementById('musicBtn');
     const audio = document.getElementById('bgMusic');
 
-    btn.addEventListener('click', () => {
+    // Arranca con el primer click en cualquier parte de la página
+    function startOnFirstInteraction() {
+      audio.play().then(() => {
+        btn.classList.add('is-playing');
+      }).catch(() => {});
+      document.removeEventListener('click', startOnFirstInteraction);
+    }
+    document.addEventListener('click', startOnFirstInteraction);
+
+    // El botón flotante sigue controlando play/pause manualmente
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // no dispara el listener de arriba si ya arrancó
       if (audio.paused) {
         audio.play();
         btn.classList.add('is-playing');
